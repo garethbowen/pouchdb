@@ -676,6 +676,10 @@ AbstractPouchDB.prototype.getAttachment =
     callback = opts;
     opts = {};
   }
+  // TODO: I dont like this, it forces an extra read for every
+  // attachment read and enforces a confusing api between
+  // adapter.js and the adapter implementation, should probably remove
+  // idb-next does not need it
   this._get(docId, opts, function (err, res) {
     if (err) {
       return callback(err);

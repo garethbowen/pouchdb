@@ -222,7 +222,7 @@ adapters.forEach(function (adapter) {
       });
     });
 
-    it('Testing conflicts', function (done) {
+    it.skip('Testing conflicts', function (done) {
       var db = new PouchDB(dbs.name);
       testUtils.writeDocs(db, JSON.parse(JSON.stringify(origDocs)),
         function () {

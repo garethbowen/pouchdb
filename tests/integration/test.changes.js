@@ -218,7 +218,6 @@ adapters.forEach(function (adapter) {
               }).on('complete', function (results) {
                 results = results.results;
                 results.length.should.equal(2);
-
                 // order is not guaranteed
                 var first = results[0];
                 var second = results[1];
